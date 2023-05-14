@@ -4,7 +4,7 @@ ob_start();
 include_once('includes/header.php');
 include_once('../negocio/NHabitacion.php');
 include_once('../negocio/NCategoria.php');
-$habitaciones = new NHabitacion;
+$habitaciones = new NegocioHabitacion;
 $categorias = new NCategoria;
 foreach ($habitaciones->modificar2($_GET['id_edit']) as $habitacion) : ?>
 <?php endforeach;
