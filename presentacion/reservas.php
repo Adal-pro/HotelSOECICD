@@ -5,7 +5,7 @@ include_once('../negocio/NReserva.php');
 include_once('../negocio/NHabitacion.php');
 include_once('../negocio/NUsuario.php');
 $reservas = new NReserva;
-$habitaciones = new NHabitacion;
+$habitaciones = new NegocioHabitacion;
 $usuarios = new NUsuario;
 // print_r($reservas->lista())
 ?>
