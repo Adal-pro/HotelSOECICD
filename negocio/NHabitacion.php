@@ -4,14 +4,14 @@
     if (isset($_POST['update'])){
  
 
-        $habitacion = new NHabitacion;
+        $habitacion = new NegocioHabitacion;
         $habitacion->modificar($_GET['id_edit'],$_POST['nroh'],$_POST['descripcione'],$_POST['estadoe'],$_POST['categoriae']); 
         header("Location: ../presentacion/habitaciones.php");
         die();
         }
 
     if (isset($_POST['nro'])){
-        $habitacion = new NHabitacion;
+        $habitacion = new NegocioHabitacion;
        $habitacion->create($_POST['nro'],$_POST['descripcion'],$_POST['estado'],$_POST['categoria']);
         header("Location: ../presentacion/habitaciones.php");
        die();
@@ -19,13 +19,13 @@
 
    
     if (isset($_GET['delete_id'])){
-        $habitacion = new NHabitacion;
+        $habitacion = new NegocioHabitacion;
         $habitacion->eliminar($_GET['delete_id']); 
         header("Location: ../presentacion/habitaciones.php");
         die();
         
     }
-    class NHabitacion{
+    class NegocioHabitacion{
         private $habitacion;
         
         public function __construct(){
