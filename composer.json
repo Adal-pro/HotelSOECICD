@@ -1,7 +1,7 @@
 {
     "name": "your-vendor-name/package-name",
     "require": {
-         "php": ">=8.2",
+         "php": "^6.2",
         "another-vendor/package": "1.*"
     }
 }
