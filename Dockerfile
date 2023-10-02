@@ -12,5 +12,5 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 
 
-EXPOSE 80
+EXPOSE 8080
 
