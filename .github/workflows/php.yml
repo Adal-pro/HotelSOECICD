@@ -1,0 +1,26 @@
+name: Install Dependencies
+
+on:
+  push:
+    branches:
+      - main # o el nombre de tu rama principal
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install PHP and Composer
+      run: |
+        sudo apt-get update
+        sudo apt-get install php php-cli php-mbstring unzip -y
+        curl -sS https://getcomposer.org/installer -o composer-setup.php
+        php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+
+    - name: Install dependencies
+      run: composer install
+
+    # Puedes agregar más pasos según sea necesario para tu proyecto.
