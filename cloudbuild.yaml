@@ -1,0 +1,14 @@
+steps:
+  # Instalar las dependencias del proyecto (por ejemplo, Composer para PHP)
+  - name: 'gcr.io/cloud-builders/composer'
+    args: ['install']
+
+  # Ejecutar pruebas automatizadas (por ejemplo, PHPUnit para PHP)
+  - name: 'gcr.io/cloud-builders/composer'
+    args: ['test']
+
+  # Realizar análisis de código estático (por ejemplo, PHP CodeSniffer)
+  - name: 'gcr.io/cloud-builders/composer'
+    args: ['check']
+
+# Puedes añadir más pasos según sea necesario para tu proyecto.
